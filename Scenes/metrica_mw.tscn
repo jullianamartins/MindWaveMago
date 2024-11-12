@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c0gu1oecxxt3m"]
+
+[node name="MetricaMW" type="Node"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1041.0
+offset_top = 22.0
+offset_right = 1139.0
+offset_bottom = 45.0
+text = "aqui metrica"

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://clcvd8ahf85ri"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_b4eri"]
+[ext_resource type="Texture2D" uid="uid://24ru0weax0x2" path="res://Assets/bruxo-removebg-preview.png" id="2_ywhd6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2rwit"]
+size = Vector2(119, 148)
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_b4eri")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_ywhd6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, -1)
+shape = SubResource("RectangleShape2D_2rwit")

@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcsaf8y77nyp2"]
+
+[ext_resource type="Script" path="res://Scripts/levels.gd" id="1_3x4qj"]
+[ext_resource type="Texture2D" uid="uid://b0dgkoplierxi" path="res://Assets/back forest.jpg" id="2_blr6a"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3x4qj")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_blr6a")
+
+[node name="Fase1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 319.0
+offset_right = 375.0
+offset_bottom = 382.0
+theme_override_font_sizes/font_size = 40
+text = "Fase 1"
+
+[node name="Fase2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 804.0
+offset_top = 319.0
+offset_right = 931.0
+offset_bottom = 382.0
+theme_override_font_sizes/font_size = 40
+text = "Fase 2"
+
+[connection signal="pressed" from="Fase1" to="." method="_on_fase_1_pressed"]
+[connection signal="pressed" from="Fase2" to="." method="_on_fase_2_pressed"]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://d35j5hbma6ywq"]
+
+[ext_resource type="Texture2D" uid="uid://b0dgkoplierxi" path="res://Assets/back forest.jpg" id="1_o18e7"]
+[ext_resource type="PackedScene" uid="uid://clcvd8ahf85ri" path="res://Scenes/player.tscn" id="2_vjwd7"]
+[ext_resource type="PackedScene" uid="uid://d3kvoh7os6o6t" path="res://Scenes/cronometro.tscn" id="3_4i4b4"]
+[ext_resource type="PackedScene" uid="uid://c0gu1oecxxt3m" path="res://Scenes/metrica_mw.tscn" id="3_t5yfc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n4jei"]
+size = Vector2(1151.5, 20)
+
+[node name="level1" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_o18e7")
+
+[node name="Cronometro" parent="." instance=ExtResource("3_4i4b4")]
+
+[node name="MetricaMW" parent="." instance=ExtResource("3_t5yfc")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(574.75, 637)
+shape = SubResource("RectangleShape2D_n4jei")
+
+[node name="player" parent="." instance=ExtResource("2_vjwd7")]
+position = Vector2(582, 509)
+platform_wall_layers = 3
